@@ -1,0 +1,168 @@
+/* Reset básico */
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: rgb(52, 63, 82);
+}
+
+/* Barra de navegación fija */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #333;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Sección de bienvenida ocupa el viewport */
+#welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background:  #c3a3ffa4;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ddd;
+}
+
+/* Sección de proyectos */
+#projects {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-tile {
+    background: white;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-tile:hover {
+    transform: scale(1.05);
+}
+
+/* Sección de habilidades */
+#skills {
+    padding: 50px 20px;
+    text-align: center;
+    background: #eee;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill {
+    text-align: center;
+    margin: 15px;
+}
+
+.skill img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.skill p {
+    margin-top: 5px;
+}
+
+/* Sección de contacto */
+#contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Pie de página */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Enlace de GitHub */
+#profile-link {
+    color: #0077cc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* 📱 Media Query para móviles */
+@media (max-width: 768px) {
+    #navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .project-tile {
+        width: 90%;
+    }
+}
